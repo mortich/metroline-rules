@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MetroLine — Устав и санкции (ULX)</title>
+  <meta name="theme-color" content="#0b1226" />
+  <style>
+    :root{
+      --bg:#0b1226; --bg2:#0f1739; --card:#121b3b; --glass:rgba(255,255,255,.06);
+      --text:#eef3ff; --muted:#a8b4e2; --brand:#7cc7ff; --brand2:#7bf0b1; --danger:#ff6b6b; --warn:#ffd166;
+      --ok:#7bf0b1; --line:rgba(255,255,255,.12);
+      --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{background:linear-gradient(180deg,var(--bg),var(--bg2)); color:var(--text); margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif}
+    a{color:var(--brand)}
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter:saturate(1.2) blur(10px);
+      background:linear-gradient(90deg,rgba(124,199,255,.12),rgba(123,240,177,.12));
+      border-bottom:1px solid var(--line);
+    }
+    .nav{max-width:1100px;margin:0 auto;display:flex;gap:16px;align-items:center;padding:14px 20px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+    .logo-badge{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:var(--shadow)}
+    .tabs{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+    .tab{padding:8px 12px;border:1px solid var(--line);border-radius:999px;cursor:pointer;user-select:none}
+    .tab.active{background:var(--glass)}
+    main{max-width:1100px;margin:26px auto;padding:0 20px 60px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+      border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow);
+    }
+    .card .pad{padding:20px}
+    h1{font-size:28px;margin:0 0 10px}
+    h2{font-size:22px;margin:20px 0 10px}
+    h3{font-size:18px;margin:18px 0 8px;color:var(--brand2)}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    .two{grid-template-columns:1fr 1fr}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04)}
+    .list{display:grid;gap:10px}
+    .li{
+      padding:12px 14px;border:1px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.03)
+    }
+    .kbd{font-family:ui-monospace,Menlo,Consolas,monospace;background:rgba(0,0,0,.35);border:1px solid var(--line);padding:0 8px;border-radius:6px}
+    .scale{display:grid;grid-template-columns:140px 1fr;gap:10px;align-items:center}
+    .pill{padding:6px 10px;border-radius:999px;font-weight:600}
+    .danger{background:rgba(255,107,107,.15); color:#ffdede; border:1px solid rgba(255,107,107,.35)}
+    .warn{background:rgba(255,209,102,.15); color:#fff7d6; border:1px solid rgba(255,209,102,.35)}
+    .ok{background:rgba(123,240,177,.15); color:#eafff3; border:1px solid rgba(123,240,177,.35)}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:14px;border:1px solid var(--line)}
+    thead th{background:rgba(255,255,255,.06);text-align:left;padding:12px 14px}
+    tbody td{border-top:1px solid var(--line);padding:12px 14px;vertical-align:top}
+    .foot{margin-top:18px;font-size:12px;color:var(--muted)}
+    .hl{color:var(--brand2);font-weight:700}
+    .notice{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(124,199,255,.08)}
+    .anchor{scroll-margin-top:90px}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} .two{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo"><div class="logo-badge"></div> MetroLine · Устав (ULX)</div>
+      <div class="tabs">
+        <a class="tab active" href="#general">Общее</a>
+        <a class="tab" href="#process">Игровой процесс</a>
+        <a class="tab" href="#tech">Техническое</a>
+        <a class="tab" href="#classes">Классы</a>
+        <a class="tab" href="#ulx">ULX и дискреция</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero card">
+      <div class="pad">
+        <h1 id="general" class="anchor">Единый устав сервера MetroLine</h1>
+        <p class="muted">Вступает в силу с <b>26.10.2025</b>. Донат не даёт иммунитета. Заходя на сервер, вы автоматически подтверждаете согласие с правилами.</p>
+        <div class="chips">
+          <div class="chip">RP/симуляция метро</div>
+          <div class="chip">Anti-cheat</div>
+          <div class="chip">Voice/Chat Policy</div>
+          <div class="chip">ULX-администрирование</div>
+        </div>
+        <div style="height:14px"></div>
+        <div class="notice">Любое действие, мешающее игровому процессу, но прямо не описанное в уставе, карается по усмотрению администрации.</div>
+      </div>
+      <div class="pad">
+        <h3>Быстрый доступ</h3>
+        <div class="list">
+          <a class="li" href="#process">Нарушения игрового процесса → санкции</a>
+          <a class="li" href="#tech">Технические нарушения → санкции</a>
+          <a class="li" href="#classes">Ответственность классов машинистов</a>
+          <a class="li" href="#ulx">ULX-команды и шкала сроков</a>
+        </div>
+        <p class="foot">Версия страницы: ULX-версия (дискреция сроков, примеры команд, чек-лист для модераторов).</p>
+      </div>
+    </section>
+
+    <section id="process" class="anchor">
+      <h2>Раздел II–III. Нарушения общения и игрового процесса</h2>
+      <div class="card pad">
+        <table>
+          <thead><tr><th>Нарушение</th><th>Базовая мера</th><th>Комментарий</th></tr></thead>
+          <tbody>
+            <tr><td>Нецензурная лексика, токсичность</td><td>Пред / кик / бан <span class="hl">1–3 дня</span></td><td>Усиливать при повторах/массовости</td></tr>
+            <tr><td>Оскорбления администрации/игроков</td><td>Бан <span class="hl">3–7 дней</span></td><td>Отягчает публичность/повторы</td></tr>
+            <tr><td>Оскорбления родных, угрозы жизни</td><td class="hl">Перманент</td><td>Без права апелляции</td></tr>
+            <tr><td>Спам/флуд/злоупотребление чатом</td><td>Пред / кик / бан</td><td>Срок по шкале ULX ниже</td></tr>
+            <tr><td>Реклама сторонних проектов</td><td class="hl">Перманент + ЧС</td><td>Удаление контента</td></tr>
+            <tr><td>Красный сигнал / обратное направление</td><td>Бан <span class="hl">3–7 дней</span></td><td>См. ответственность классов</td></tr>
+            <tr><td>Помехи движению (таран, сцеп и т.п.)</td><td>Бан <span class="hl">3–7 дней</span></td><td>Отягчает намеренность/масштаб</td></tr>
+            <tr><td>Игнор диспетчера</td><td>Удаление состава / бан <span class="hl">1–3 дня</span></td><td>Повтор → усиление</td></tr>
+            <tr><td>Звуковой спам (Soundpad/VX)</td><td>Кик → при повторе бан</td><td>Отключить источник</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tech" class="anchor">
+      <h2>Раздел IV. Технические нарушения</h2>
+      <div class="card pad">
+        <table>
+          <thead><tr><th>Нарушение</th><th>Базовая мера</th><th>Комментарий</th></tr></thead>
+          <tbody>
+            <tr><td>Читы, DDoS, вредоносная активность</td><td class="hl">Перманент + ЧС</td><td>Логи фиксируются</td></tr>
+            <tr><td>Нарушение стабильности сервера</td><td>Кик / бан 7 дней / перманент</td><td>По последствиям</td></tr>
+            <tr><td>Частый спавн техники без надобности</td><td>Кик / бан 7 дней</td><td>Разъяснить ограничения</td></tr>
+            <tr><td>Использование багов</td><td>Бан 7 дней / перманент</td><td>В зависимости от выгоды</td></tr>
+            <tr><td>Спавн без допуска / на станциях</td><td>Удаление состава / бан 3–7 дней</td><td>Обучение правилам</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="classes" class="anchor">
+      <h2>Раздел VI. Ответственность классов машинистов</h2>
+      <div class="card pad">
+        <table>
+          <thead><tr><th>Нарушение</th><th>3 класс</th><th>2 класс</th><th>1 класс</th></tr></thead>
+          <tbody>
+            <tr><td>Проезд красного</td><td>Снятие допуска / бан</td><td>Понижение / бан</td><td>Понижение / бан</td></tr>
+            <tr><td>Помехи движению</td><td>Бан 3 дня</td><td>Бан 5 дней</td><td>Бан 7 дней</td></tr>
+            <tr><td>Игнор ДЦХ</td><td>Бан 1 день</td><td>Бан 3 дня</td><td>Бан 5 дней</td></tr>
+            <tr><td>Технические нарушения</td><td>1–3 дня</td><td>3–5 дней</td><td>5–7 дней</td></tr>
+            <tr><td>Оскорбления/неадекват</td><td colspan="3">Бан по ситуации (см. дискрецию ULX)</td></tr>
+          </tbody>
+        </table>
+        <p class="foot">Таблица указывает ориентиры. Конкретный срок уточняется разделом «ULX и дискреция» ниже.</p>
+      </div>
+    </section>
+
+    <section id="ulx" class="anchor">
+      <h2>Раздел IX. ULX и дискреция сроков наказаний</h2>
+      <div class="card pad grid">
+        <div class="notice">
+          <b>Прямое уточнение устава:</b> Администрация вправе устанавливать <u>конкретный срок бана</u> в рамках указанных вилок, а если вилка не указана — по собственной оценке тяжести нарушения, с учётом:
+          <b>повторности</b>, <b>намеренности</b>, <b>масштаба последствий</b>, <b>сотрудничества нарушителя</b> и <b>обстоятельств инцидента</b>. Запрещены заведомо произвольные/карательные сроки, не соотносящиеся с проступком.
+        </div>
+
+        <h3>Шкала для выбора срока (ориентиры)</h3>
+        <div class="grid">
+          <div class="scale"><span class="pill ok">Предупреждение → 30–120 мин</span><span class="muted">мелкие/первичные нарушения, без ущерба</span></div>
+          <div class="scale"><span class="pill warn">3–24 часа</span><span class="muted">средняя тяжесть, локальный ущерб, 1–2 повтора</span></div>
+          <div class="scale"><span class="pill warn">1–7 дней</span><span class="muted">существенный вред процессу, злостность, рецидив</span></div>
+          <div class="scale"><span class="pill danger">14–30 дней</span><span class="muted">тяжкий вред/подрыв администрирования</span></div>
+          <div class="scale"><span class="pill danger">Перманент</span><span class="muted">читы, DDoS, угрозы жизни, серьёзная токсичность</span></div>
+        </div>
+
+        <h3>ULX — шпаргалка команд</h3>
+        <div class="grid two">
+          <div class="list">
+            <div class="li"><b>Ban:</b> <span class="kbd">ulx ban &lt;игрок&gt; &lt;минуты&gt; &lt;причина&gt;</span><br><span class="muted">0 минут = перманент</span></div>
+            <div class="li"><b>Kick:</b> <span class="kbd">ulx kick &lt;игрок&gt; &lt;причина&gt;</span></div>
+            <div class="li"><b>Gag/Mute:</b> <span class="kbd">ulx gag &lt;игрок&gt;</span> · <span class="kbd">ulx mute &lt;игрок&gt;</span></div>
+            <div class="li"><b>Jail:</b> <span class="kbd">ulx jail &lt;игрок&gt; &lt;время&gt;</span> · <span class="kbd">ulx jailtp</span></div>
+            <div class="li"><b>Warn (чат):</b> <span class="kbd">ulx asay &lt;текст&gt;</span> / <span class="kbd">ulx psay &lt;игрок&gt; &lt;текст&gt;</span></div>
+          </div>
+          <div class="list">
+            <div class="li"><b>Unban:</b> <span class="kbd">ulx unban &lt;steamid&gt;</span></div>
+            <div class="li"><b>Freeze/Slay:</b> <span class="kbd">ulx freeze &lt;игрок&gt;</span> · <span class="kbd">ulx slay &lt;игрок&gt;</span></div>
+            <div class="li"><b>Группы:</b> <span class="kbd">ulx adduser &lt;игрок&gt; &lt;группа&gt;</span> · <span class="kbd">ulx removeuser &lt;игрок&gt;</span></div>
+            <div class="li"><b>Логи:</b> фиксируйте время, причину, доказательства (скрины/демо)</div>
+            <div class="li"><b>Формат причины:</b> <span class="kbd">[Раздел/пункт] Кратко, ссылки на доказательства</span></div>
+          </div>
+        </div>
+
+        <h3>Чек-лист модератора перед баном</h3>
+        <div class="list">
+          <div class="li">1) Проверить таблицу санкций и историю нарушений игрока</div>
+          <div class="li">2) Обозначить правило и предупредить (если позволяет ситуация)</div>
+          <div class="li">3) Зафиксировать доказательства (лог/скрин/видео)</div>
+          <div class="li">4) Выбрать срок по шкале выше, указать понятную причину</div>
+          <div class="li">5) Сообщить в админ-канал: ник, SteamID, срок, причина, ссылка на док-ва</div>
+        </div>
+
+        <h3>Примеры формулировок причин</h3>
+        <div class="grid two">
+          <div class="li"><b>Игнор ДЦХ (повторно)</b><br>ulx ban Player 180 "Разд. III: Игнор ДЦХ (повтор) — задержки на линии"</div>
+          <div class="li"><b>Помехи движению (таран)</b><br>ulx ban Player 1440 "Разд. III: Намеренные помехи движению — таран двух составов"</div>
+          <div class="li"><b>Оскорбления родных</b><br>ulx ban Player 0 "Разд. II: Оскорбления родных — перманент"</div>
+          <div class="li"><b>Звуковой спам</b><br>ulx ban Player 60 "Разд. II: Звуковой спам, после кика — повтор"</div>
+        </div>
+
+        <p class="foot">Напоминание: решения администрации окончательны; попытка обхода бана — пожизненный ЧС. Соблюдайте меру и соразмерность.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
